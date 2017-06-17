@@ -3,7 +3,7 @@ from nsga2.problems.zdt import ZDT
 from nsga2.problems.zdt.zdt3_definitions import ZDT3Definitions
 
 from metrics.problems.zdt import ZDT3Metrics
-from plotter import Plotter
+##from plotter import Plotter
 
 collected_metrics = {}
 def collect_metrics(population, generation_num):
