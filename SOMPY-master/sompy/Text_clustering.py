@@ -6,7 +6,7 @@ categories = ['comp.sys.mac.hardware',  'misc.forsale', 'talk.politics.mideast',
 #categories = ['alt.atheism','rec.sport.baseball', 'comp.graphics', 'sci.space', 'rec.sport.hockey',  'comp.windows.x']
 
 dataset = fetch_20newsgroups(subset='train', categories=categories, shuffle=True, random_state=42)
-vectorizer = TfidfVectorizer(max_df=0.5, max_features=10000, min_df=2, stop_words='english', use_idf=True, ngram_range=(1, 2))
+vectorizer = TfidfVectorizer(max_df=0.5, max_features=10000, min_df=2, stop_words='english', use_idf=False, ngram_range=(1, 2))
 #vectorizer = TfidfVectorizer(min_df=5, max_df=0.5, stop_words='english')
 matrix = vectorizer.fit_transform(dataset.data)
 dense_matrix = matrix.todense()
