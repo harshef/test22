@@ -17,10 +17,10 @@ def Select(population,sil_sco,DunnIndex,nsol, new_di, new_ss,generation,self_pop
     if (Zdt_definitions is None) and (PPlotter is None) and (PProblem is None) and (EEvolution is None):
 
         zdt_definitions = ZDT3Definitions()
-        plotter = Plotter(zdt_definitions)
+        ##plotter = Plotter(zdt_definitions)
         problem = ZDT(zdt_definitions)
         evolution = Evolution(problem, 1, len(population))
-        evolution.register_on_new_generation(plotter.plot_population_best_front)
+        ##evolution.register_on_new_generation(plotter.plot_population_best_front)
         evolution.register_on_new_generation(collect_metrics)
     else:
         zdt_definitions=Zdt_definitions
